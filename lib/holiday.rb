@@ -79,7 +79,7 @@ def all_supplies_in_holidays(holiday_hash)
       season = season_key.to_s
       puts season.capitalize
       hol_key = key.to_s + ':'
-      hol_value = val.join('')
+      hol_value = val.join(',')
       puts '  ' + hol_key + ' ' + hol_value
     end 
   end
