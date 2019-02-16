@@ -64,22 +64,13 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   
-  output = holiday_hash.each do |season_key, season_value|
-    season = season_key.to_s + ':'
-    puts season 
-    season_value.each do |key, val|
-      hol_key = key + ':'
-      hol_value = val.join('')
-      puts '  ' + hol_key + ' ' + hol_value
-    end 
-  end
   
   holiday_hash.each do |season_key, season_value|
     season = season_key.to_s + ':'
     puts season.capitalize
     season_value.each do |key, val|
       hol_key = key.to_s + ':'
-      hol_value = val.join(',')
+      hol_value = val.join(', ')
       puts '  ' + hol_key + ' ' + hol_value
     end 
   end
