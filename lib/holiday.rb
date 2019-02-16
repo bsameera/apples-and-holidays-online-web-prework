@@ -65,11 +65,12 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   
   output = holiday_hash.each do |season_key, season_value|
-    season = season_key.to_s
+    season = season_key.to_s + ':'
+    puts season.capitalize! 
     season_value.each do |key, val|
-      if val.include?("BBQ")
-        output.push(key) 
-      end 
+      hol_key = key.capitalize! + ':'
+      hol_value = val.join('')
+      puts '  ' + hol_key + ' ' + hol_value
     end 
   end
 
